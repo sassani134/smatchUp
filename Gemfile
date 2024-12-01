@@ -73,3 +73,5 @@ gem "authentication-zero", "~> 4.0"
 gem "byebug", "~> 11.1", groups: [ :development, :test ]
 
 gem "view_component"
+
+gem "rails_icons"
