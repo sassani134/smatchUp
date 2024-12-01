@@ -69,3 +69,5 @@ end
 gem "mobility", "~> 1.3.1"
 
 gem "authentication-zero", "~> 4.0"
+
+gem "byebug", "~> 11.1", :groups => [:development, :test]
