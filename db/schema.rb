@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_02_103213) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_02_104704) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -66,6 +66,27 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_02_103213) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "matchup_posts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "opponent"
+    t.string "title"
+    t.string "self_character"
+    t.string "foe_character"
+    t.text "victory_conditions"
+    t.text "defeat_condition"
+    t.text "neutral"
+    t.text "disadvantage_edge"
+    t.text "disadvantage_offstage"
+    t.text "disadvantage_juggle"
+    t.text "advantage_edge"
+    t.text "advantage_offstage"
+    t.text "advantage_juggle"
+    t.text "miscellaneou"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_matchup_posts_on_user_id"
+  end
+
   create_table "mobility_string_translations", force: :cascade do |t|
     t.string "locale", null: false
     t.string "key", null: false
@@ -112,5 +133,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_02_103213) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "characters", "games"
+  add_foreign_key "matchup_posts", "users"
   add_foreign_key "sessions", "users"
 end
