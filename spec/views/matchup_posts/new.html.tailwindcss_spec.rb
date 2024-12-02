@@ -25,7 +25,6 @@ RSpec.describe "matchup_posts/new", type: :view do
     render
 
     assert_select "form[action=?][method=?]", matchup_posts_path, "post" do
-
       assert_select "input[name=?]", "matchup_post[user_id]"
 
       assert_select "input[name=?]", "matchup_post[opponent]"

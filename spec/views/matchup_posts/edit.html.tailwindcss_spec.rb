@@ -29,7 +29,6 @@ RSpec.describe "matchup_posts/edit", type: :view do
     render
 
     assert_select "form[action=?][method=?]", matchup_post_path(matchup_post), "post" do
-
       assert_select "input[name=?]", "matchup_post[user_id]"
 
       assert_select "input[name=?]", "matchup_post[opponent]"
