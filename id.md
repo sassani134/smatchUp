@@ -29,4 +29,15 @@ disadvantage_edge:text disadvantage_offstage disadvantage:juggle
 
 rails g scaffold MatchupPost user:references opponent title self_character:references foe_character:references victory_conditions:text defeat_condition:text neutral:text disadvantage_edge:text disadvantage_offstage:text disadvantage_juggle:text advantage_edge:text advantage_offstage:text advantage_juggle:text miscellaneou:text
 
-rails g scaffold MatchupPost user:references opponent title self_character:references foe_character:references victory_conditions:text defeat_condition:text neutral:text disadvantage_edge:text disadvantage_offstage:text disadvantage_juggle:text advantage_edge:text advantage_offstage:text advantage_juggle:text miscellaneou:text
+rails g scaffold MatchupPost user:references opponent title self_character foe_character victory_conditions:text defeat_condition:text neutral:text disadvantage_edge:text disadvantage_offstage:text disadvantage_juggle:text advantage_edge:text advantage_offstage:text advantage_juggle:text miscellaneou:text
+
+---
+
+need to be connected to create matchup
+
+user is user session in creation
+
+remove user field
+
+enable rich text
+
